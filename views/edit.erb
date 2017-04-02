@@ -1,0 +1,15 @@
+<h1>You are currently editing "<%= @title%>"</h1>
+
+<div>
+  <form method='POST' action='/<%= @title %>'>
+    <!-- because he cannot put a put method on our form -->
+    <input type='hidden' name='_method' value='put'>
+    <fieldset>
+      <label for='content'>Content: </label>
+      <textarea rows='10' cols='50' name='content' id='content'><%= @content %></textarea>
+    </fieldset>
+    <input type='submit'>
+  </form>
+</div>
+
+<a href='/'>Back to homepage</a>
