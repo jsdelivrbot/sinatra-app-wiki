@@ -22,6 +22,7 @@ end
 get "/" do
   # erb loads from "views" directory by default with filename as a symbol
   erb :welcome
+  # erb :welcome, layout: :templatename # uncomment this line if you want to specify a specific template, other than default.
 end
 
 get "/new" do
