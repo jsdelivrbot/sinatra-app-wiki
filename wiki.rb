@@ -15,6 +15,10 @@ def save_content(title, content) #creates new file, or updates existing file
   end
 end
 
+def delete_content(title)
+  File.delete("pages/#{title}.txt")
+end
+
 get "/" do
   # erb loads from "views" directory by default with filename as a symbol
   erb :welcome
@@ -28,6 +32,11 @@ end
 post "/create" do
   save_content(params[:title], params[:content])
   redirect URI.escape("/#{params[:title]}")
+end
+
+delete "/:title" do
+  delete_content(params[:title])
+  redirect "/"
 end
 
 get "/:title" do
