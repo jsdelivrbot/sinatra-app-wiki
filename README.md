@@ -8,3 +8,4 @@ Things I would still like to do:
 * Styling wth SASS
 * Responsiveness
 * List all posts
+* Comment on a post
