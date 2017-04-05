@@ -1,15 +1,21 @@
-<h1>You are currently editing "<%= @title%>"</h1>
+<header class='header-center'>
+  <h3>You are currently editing the post</h3> 
+  <h1>"<%= @title%>"</h1>
+</header>
 
+<section class='form'>
 <div>
   <form method='POST' action='/<%= @title %>'>
     <!-- because he cannot put a put method on our form -->
     <input type='hidden' name='_method' value='put'>
     <fieldset>
-      <label for='content'>Content: </label>
-      <textarea rows='10' cols='50' name='content' id='content'><%= @content %></textarea>
+      <label for='content'>Content</label>
+      <textarea class='custom-input' rows='6' name='content' id='content'><%= @content %></textarea>
     </fieldset>
-    <input type='submit'>
+    <div class='btn-container'>
+      <a class='btn' href='/'>︎Back to homepage</a>
+      <input class='btn-submit' type='submit' value='save changes'>
+    </div>
   </form>
 </div>
-
-<a href='/'>Back to homepage</a>
+</section>

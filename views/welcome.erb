@@ -1,10 +1,19 @@
-<h1>Welcome to my Wiki!</h1>
-
-<p>Or, you can create a new post <a href='/new'>here</a>.</p>
-
-<h1>All Posts</h1>
-<ul>
-  <% @posts_arr.each do |post| %>
-  <li><a href='/<%= post %>'><%= post %></a></li>
-  <% end %>
-</ul>
+<header>
+  <div id='header-left'>
+    <h1>Wiki Land</h1>
+    <h3>Write a lil something for the world to see! <br>Click on a tile to see what other people have posted.</h3>
+  </div>
+  <div>
+    <a class='btn' href='/new'>CREATE NEW</a>
+  </div>
+</header>
+<section class='posts-container'>
+<div class='gallery'>
+    <% @posts_arr.each do |post| %>
+    <a href='/<%= post %>' class='post-box'>
+      <h3><%= post %></h3>
+      
+    </a>
+    <% end %>
+</div>
+</section>

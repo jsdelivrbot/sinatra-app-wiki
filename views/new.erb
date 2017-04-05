@@ -1,18 +1,23 @@
-<h1>Create a new page.</h1>
+<header class='header-center'>
+<h1>Create a new post</h1>
 <h3>Make it interesting ;)</h3>
+</header>
 
+<section class='form'>
 <div>
   <form method="POST" action='/create'>
     <fieldset>
-      <label for='title'>Title: </label>
-      <input type='text' name='title' id='title'>
+      <label for='title'>Title</label>
+      <input class='custom-input' type='text' name='title' id='title'>
     </fieldset>
     <fieldset>
-      <label for='content'>Content: </label>
-      <textarea rows='10' cols='50' name='content' id='content'></textarea>
+      <label for='content'>Content</label>
+      <textarea class='custom-input' rows='6' name='content' id='content'></textarea>
     </fieldset>
-    <input type='submit'>
+    <div class='btn-container'>
+      <a class='btn' href='/'>⬅︎ Back to homepage</a>
+      <input class='btn-submit' type='submit'>
+    </div>
   </form>
 </div>
-
-<a href='/'>Back to homepage</a>
+</section>

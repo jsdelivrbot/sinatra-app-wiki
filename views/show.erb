@@ -1,12 +1,18 @@
+<header class='header-center'>
 <h1><%= @title %></h1>
-<p><%= @content %></p>
+</header>
 
+<section>
 <div>
+<p><%= @content %></p>
+</div>
+
+<div class='btn-container'>
   <a href='/<%= @title %>/edit'>Edit this page</a>
   <form method='POST' action='/<%= @title %>'>
     <input type='hidden' name='_method' value='delete'>
-    <input type='submit' value='Delete this post'>
+    <input type='submit' value='×'>
   </form>
+  <a href='/'>Back to homepage</a>
 </div>
-
-<a href='/'>Back to homepage</a>
+</section>
